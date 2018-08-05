@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dwagner6506.views">
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/lingua_icon"
+        android:label="Lingua"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name="lingua.services.BackgroundService"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat" />
+
+        <receiver
+            android:name="lingua.services.ReminderReciever"
+            android:process=":remote" />
+
+        <activity
+            android:name="lingua.controllers.MainLanguageScreen"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="lingua.controllers.IntroScreen"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Lingua"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="lingua.controllers.Dialog_BG"
+            android:label="@string/title_activity_dialog__bg"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="lingua.controllers.SignUp"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_sign_up"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="lingua.controllers.Login"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Login"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="lingua.controllers.Quiz"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_quiz"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="lingua.controllers.Friends"
+            android:label="@string/title_activity_friends"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="lingua.controllers.AddFriend"
+            android:label="@string/title_activity_add_friend"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="lingua.controllers.RemoveFriend"
+            android:label="@string/title_activity_remove_friend"
+            android:theme="@style/AppTheme" />
+        <activity android:name="lingua.controllers.Settings" />
+
+        <service
+            android:name="lingua.services.FireBaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="lingua.services.FirebaseIDService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

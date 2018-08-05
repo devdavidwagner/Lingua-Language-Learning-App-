@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:paddingTop="5dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="lingua.controllers.Quiz"
+  >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/lingua_icon" />
+
+
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="serif"
+        android:background="@color/hunterGrn"
+        android:text=""
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:text="00"
+        android:textSize="80sp"
+        android:fontFamily="serif"
+        android:background="@color/black"
+        android:textColor="@color/red"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnA"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:fontFamily="serif"
+        android:text="A"
+        android:layout_marginTop="5dp"
+        android:textSize="12sp"
+        android:textColor="#FFFFFF"
+
+        android:background="@drawable/answerbutton"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+
+        android:layout_below="@+id/question"
+        android:layout_alignLeft="@+id/question" />
+
+
+
+    <Button
+        android:id="@+id/btnB"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="B"
+        android:textSize="12sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="serif"
+        android:background="@drawable/answerbutton"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+
+        android:layout_below="@+id/question"
+        android:layout_toRightOf="@+id/btnC"
+        android:layout_toEndOf="@+id/btnC"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        android:id="@+id/btnC"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="19dp"
+        android:text="C"
+        android:fontFamily="serif"
+        android:textSize="12sp"
+        android:textColor="#FFFFFF"
+
+        android:background="@drawable/answerbutton"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+
+
+        android:layout_below="@+id/btnB"
+        android:layout_alignLeft="@+id/btnA"
+        android:layout_alignStart="@+id/btnA" />
+
+    <Button
+        android:id="@+id/btnD"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/btnB"
+        android:layout_alignRight="@+id/btnB"
+        android:layout_alignTop="@+id/btnC"
+        android:fontFamily="serif"
+        android:textSize="12sp"
+        android:textColor="#FFFFFF"
+
+        android:background="@drawable/answerbutton"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+
+        android:text="D" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:background="@color/black"
+        android:layout_below="@+id/timer"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="serif"/>
+
+    <ImageButton
+        android:id="@+id/check"
+        android:layout_width="200dp"
+        android:layout_height="2000dp"
+        app:srcCompat="@drawable/check"
+        android:layout_below="@+id/btnD"
+        android:layout_alignLeft="@+id/btnD"
+        android:layout_alignStart="@+id/btnD"
+        android:layout_marginTop="12dp"
+        android:background="@color/green"
+        android:visibility="invisible"/>
+
+    <ImageButton
+        android:id="@+id/retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/retry"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/check"
+        android:layout_alignRight="@+id/btnC"
+        android:layout_alignEnd="@+id/btnC"
+        android:background="@color/red"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/user"
+        android:layout_marginLeft="125dp"
+        app:srcCompat="@drawable/spanish" />
+
+    <Button
+        android:id="@+id/backToMenu"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textSize="22sp"
+        android:textColor="#FFFFFF"
+
+        android:background="@drawable/button"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:fontFamily="serif"
+        android:text="MENU" />
+
+
+</RelativeLayout>

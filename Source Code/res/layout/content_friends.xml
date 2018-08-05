@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="lingua.controllers.Friends"
+    android:background="@drawable/gradient"
+   >
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@color/hunterGrn"
+        android:fontFamily="serif"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="45sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnMenu"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="MENU"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:background="@drawable/button"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:layout_weight="2.69"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/textView"
+        android:fontFamily="serif"/>
+
+    <TextView
+        android:id="@+id/usernameFriend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/btnMenu"
+        android:layout_alignBottom="@+id/btnMenu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:fontFamily="serif"/>
+
+    <ListView
+        android:id="@+id/friendsLst"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/btnMenu"
+        android:fontFamily="serif"/>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Add  Friend"
+        android:layout_below="@+id/friendsLst"
+        android:layout_alignLeft="@+id/usernameFriend"
+        android:layout_alignStart="@+id/usernameFriend"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:layout_weight="2.69"
+        android:fontFamily="serif"/>
+
+    <Button
+        android:id="@+id/btnRemove"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnAdd"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_toRightOf="@+id/btnAdd"
+        android:text="Remove Friend"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:layout_weight="2.69"
+        android:fontFamily="serif"/>
+
+</RelativeLayout>

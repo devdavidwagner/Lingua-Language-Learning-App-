@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/gradient"
+    tools:context="lingua.controllers.MainLanguageScreen">
+
+
+    <Button
+        android:id="@+id/friends"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+
+        android:background="@drawable/button"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:fontFamily="serif"
+        android:text="FRIENDS" />
+
+
+
+    <Button
+        android:id="@+id/settings"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+
+        android:background="@drawable/button"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:fontFamily="serif"
+        android:text="settings" />
+
+
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/hunterGrn"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+
+    <TextView
+        android:layout_below="@id/user"
+        android:id="@+id/titleEP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Español"
+        android:layout_centerHorizontal="true"
+        android:background="@color/hunterGrn"
+        android:textColor="@color/white"
+        android:fontFamily="serif"
+        />
+
+
+    <ImageButton
+        android:layout_below="@id/titleEP"
+        android:id="@+id/spanish"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:fontFamily="serif"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+
+        android:scaleType="centerInside"
+        android:padding="10dp"
+        android:background="@color/hunterGrn"
+        app:srcCompat="@drawable/spanish" />
+
+
+
+
+
+         <TextView
+             android:fontFamily="serif"
+             android:id="@+id/spanishLvl"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/spanish"
+             android:layout_centerHorizontal="true"
+             android:layout_marginBottom="55dp"
+             android:background="@color/hunterGrn"
+             android:textColor="@color/white"
+             android:text=""
+             />
+
+
+
+        <ImageButton
+            android:id="@+id/french"
+            android:layout_width="150dp"
+            android:layout_height="75dp"
+            android:layout_below="@+id/spanishLvl"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:padding="10dp"
+            android:background="@color/hunterGrn"
+            app:srcCompat="@drawable/french"
+            android:fontFamily="serif"/>
+
+
+        <TextView
+            android:id="@+id/titleFR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/french"
+            android:layout_centerHorizontal="true"
+            android:text="Français"
+            android:textColor="@color/white"
+            android:background="@color/hunterGrn"
+            android:fontFamily="serif"/>
+
+
+
+        <TextView
+            android:id="@+id/frenchLvl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/french"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="35dp"
+            android:textColor="@color/white"
+            android:background="@color/hunterGrn"
+            android:text=""
+            android:fontFamily="serif"/>
+
+
+
+        <ImageButton
+            android:id="@+id/german"
+            android:layout_width="150dp"
+            android:layout_height="75dp"
+            android:layout_below="@+id/titleDE"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:padding="10dp"
+            android:background="@color/hunterGrn"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/german" />
+
+
+
+
+        <TextView
+            android:id="@+id/titleDE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frenchLvl"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Deutsch"
+            android:background="@color/hunterGrn"
+            android:textColor="@color/white"
+            android:fontFamily="serif"/>
+
+
+
+
+
+        <TextView
+            android:id="@+id/germanLvl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/german"
+            android:layout_centerHorizontal="true"
+            android:background="@color/hunterGrn"
+
+            android:textColor="@color/white"
+            android:text=""
+            android:fontFamily="serif"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    tools:context="com.example.dwagner6506.views.lingua.views.introScreen">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top|center_horizontal"
+        android:keepScreenOn="true"
+        android:background="@drawable/gradient"
+        android:textColor="@color/white"
+        android:textSize="75sp"
+        android:textStyle="bold"
+        android:fontFamily="serif"/>
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <Button
+                android:id="@+id/signUp"
+
+                android:text="Sign Up"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:shadowColor="#000000"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+
+                android:fontFamily="serif"
+                />
+
+            <Button
+                android:id="@+id/logIn"
+                android:fontFamily="serif"
+                android:text="Log In"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:shadowColor="#000000"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            app:srcCompat="@drawable/lingua_icon" />
+
+        <TextView
+            android:id="@+id/title"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:shadowColor="#000000"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="Lingua \nVocab Trainer"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:paddingTop="10sp"
+            android:paddingBottom="10dp"
+            android:fontFamily="serif"
+
+
+            />
+
+
+    </FrameLayout>
+
+
+
+</FrameLayout>
